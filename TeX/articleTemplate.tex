@@ -19,6 +19,7 @@
     \usepackage{subcaption} % Allow for subcaptions on subfigure encironments
     \usepackage{soul} % Allows use of `\hl{}` command for highlighting text
     \usepackage{ifdraft} % Conditional Execution if Doc is DRAFT
+    \usepackage{tocloft} % Modification of Table Of Contents
     \usepackage[utf8]{inputenc} % Ensure UTF8 Encoding
     % MUST BE PLACED LAST %
     \usepackage{hyperref} % Hyper links
@@ -76,11 +77,16 @@
 % END TITLE PAGE
 
 % TOC, FIGURES, & TABLES
+    \setcounter{tocdepth}{3}
     \tableofcontents
+    \addtocontents{toc}{~\hfill\textbf{Page}\par}
+    \addcontentsline{toc}{section}{Contents}
     \pagebreak
     \listoffigures
+    \addcontentsline{toc}{section}{List of Figures}
     \pagebreak
     \listoftables
+    \addcontentsline{toc}{section}{List of Tables}
     \pagebreak
 % END TOC, FIGURES, & TABLES
 
@@ -94,7 +100,8 @@
 
 % Bibliography
     \pagebreak
-    \section{References}
+    \section*{References}
+    \addcontentsline{toc}{section}{References}
     \printbibliography
 % END Bibliography
 
