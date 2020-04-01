@@ -9,10 +9,12 @@
     \usepackage{comment} % 'Comment' env. for easy toggling on/off
     \usepackage{xcolor} % Make management of colors easier and flexible
     \usepackage{graphicx} % Include Images
+        \graphicspath{ {<++>} } % Directory your images are in
     \usepackage[backend=biber, style=authoryear-icomp]{biblatex} % Allow Citations
         \addbibresource{\$BIB}
     \usepackage{fancyhdr} % Styled Header/Footer
     \usepackage{appendix} % Add Appendix to document
+    \usepackage[utf8]{inputenc} % Ensure UTF8 Encoding
 % }}}
 
 % {{{ FOOTER SECTION
@@ -71,11 +73,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Bibliography
+    \pagebreak
     \section{References}
     \printbibliography
 % END Bibliography
 
 % Appendix
+    \pagebreak
     \appendix
     \appendixpage
     \addappheadtotoc
