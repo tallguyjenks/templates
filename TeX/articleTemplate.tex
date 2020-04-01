@@ -1,4 +1,5 @@
 \documentclass[10pt]{article}
+%\documentclass[10pt,draft]{article} % To see TODO items and work on drafts
 
 % {{{ PACKAGES
     \usepackage{titlesec} % Editing Section Arguments
@@ -14,7 +15,23 @@
         \addbibresource{\$BIB}
     \usepackage{fancyhdr} % Styled Header/Footer
     \usepackage{appendix} % Add Appendix to document
+    \usepackage{ifdraft}
     \usepackage[utf8]{inputenc} % Ensure UTF8 Encoding
+    % MUST BE PLACED LAST %
+    \usepackage{hyperref} % Hyper links
+        \hypersetup{colorlinks=false,pdfnewwindow=true}
+% }}}
+
+
+% {{{ CUSTOM COMMANDS
+    % TODO's for drafts
+    \ifdraft{% with draft option
+        \newcommand{\todo}[1]{%
+        \textcolor{red}{[TODO: #1]}}
+    }{% with final option
+        \newcommand{\todo}[1]{}
+    }
+    % END TODO
 % }}}
 
 % {{{ FOOTER SECTION
@@ -40,7 +57,7 @@
 
 % {{{ TITLE BLOCK
     \title{<++>}
-    \author{Bryan Jenks}
+    \author{\href{mailto:bryanjenks@protonmail.com}{Bryan Jenks}}
     \date{\today}
 % }}}
 
@@ -48,6 +65,7 @@
 \begin{document}
 
 % TITLE PAGE
+    \frontmatter
     \maketitle
     \begin{abstract}
         <++>
