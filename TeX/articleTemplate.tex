@@ -1,5 +1,4 @@
 \documentclass[10pt]{article}
-%\documentclass[10pt,draft]{article} % To see TODO items and work on drafts
 
 % {{{ PACKAGES
     \usepackage{titlesec} % Editing Section Arguments
@@ -18,8 +17,9 @@
     \usepackage{caption}    % Allow for subcaptions on subfigure encironments
     \usepackage{subcaption} % Allow for subcaptions on subfigure encironments
     \usepackage{soul} % Allows use of `\hl{}` command for highlighting text
+    \usepackage[lofdepth,lotdepth]{subfig} % Include Subfigures in TOC and use subfigs
+    \usepackage{todonotes} % Better TODO Notes
     \usepackage{ifdraft} % Conditional Execution if Doc is DRAFT
-    \usepackage{tocloft} % Modification of Table Of Contents
     \usepackage[utf8]{inputenc} % Ensure UTF8 Encoding
     % MUST BE PLACED LAST %
     \usepackage{hyperref} % Hyper links
@@ -27,15 +27,8 @@
 % }}}
 
 
-% {{{ CUSTOM COMMANDS
-    % TODO's for drafts
-    \ifdraft{% with draft option
-        \newcommand{\todo}[1]{%
-        \textcolor{red}{[TODO: #1]}}
-    }{% with final option
-        \newcommand{\todo}[1]{}
-    }
-    % END TODO
+% {{{ <++>
+
 % }}}
 
 % {{{ FOOTER SECTION
