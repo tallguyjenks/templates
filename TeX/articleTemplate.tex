@@ -12,7 +12,7 @@
     \usepackage[backend=biber, style=authoryear-icomp]{biblatex} % Allow Citations
         \addbibresource{\$BIB}
     \usepackage{fancyhdr} % Styled Header/Footer
-    \usepackage[utf-8]{inputenc} % Ensure UTF-8 Encoding
+    \usepackage{appendix} % Add Appendix to document
 % }}}
 
 % {{{ FOOTER SECTION
@@ -45,31 +45,40 @@
 
 \begin{document}
 
-    % TITLE PAGE
+% TITLE PAGE
     \maketitle
     \begin{abstract}
         <++>
     \end{abstract}
     \pagebreak
-    % END TITLE PAGE
+% END TITLE PAGE
 
-    % TOC, FIGURES, & TABLES
+% TOC, FIGURES, & TABLES
     \tableofcontents
     \pagebreak
     \listoffigures
     \pagebreak
     \listoftables
     \pagebreak
-    % END TOC, FIGURES, & TABLES
+% END TOC, FIGURES, & TABLES
 
-
-    % SECTION 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Body
     \section{<++>}
 
     <++>
+% END Document Body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Bibliography
     \section{References}
-
     \printbibliography
+% END Bibliography
+
+% Appendix
+    \appendix
+    \appendixpage
+    \addappheadtotoc
+% END Appendix
 
 \end{document}
