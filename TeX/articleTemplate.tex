@@ -53,7 +53,7 @@
 % }}}
 
 % {{{ TITLE BLOCK
-    \title{<++>}
+    \title{\huge{<++>}}
     \author{\href{mailto:bryanjenks@protonmail.com}{Bryan Jenks}}
     \date{\today}
 % }}}
@@ -62,10 +62,20 @@
 \begin{document}
 
 % TITLE PAGE
+
+% ----- Toggle this for a seperate and distinct title page ----- %
+%   \begin{titlepage}
+%           \maketitle
+%           \thispagestyle{empty}
+%           \clearpage
+%   \end{titlepage}
+% ----- END ----- %
+
     \maketitle
     \begin{abstract}
         <++>
     \end{abstract}
+    \thispagestyle{empty}
     \pagebreak
 % END TITLE PAGE
 
@@ -74,13 +84,17 @@
     \tableofcontents
     \addtocontents{toc}{~\hfill\textbf{Page}\par}
     \addcontentsline{toc}{section}{Contents}
+    \thispagestyle{empty}
     \pagebreak
     \listoffigures
     \addcontentsline{toc}{section}{List of Figures}
+    \thispagestyle{empty}
     \pagebreak
     \listoftables
     \addcontentsline{toc}{section}{List of Tables}
+    \thispagestyle{empty}
     \pagebreak
+    \setcounter{page}{1}
 % END TOC, FIGURES, & TABLES
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
