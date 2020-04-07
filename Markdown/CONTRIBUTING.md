@@ -1,6 +1,6 @@
 We welcome contributions to the **<PACKAGE NAME>** package. To submit a contribution:
 
-%% FIX LINKS WITH NEW URL
+<!-- FIX LINKS WITH NEW URL -->
 1.  [Fork](https://github.com/tallguyjenks/runes/fork) the repository and make your changes.
 
 2.  Submit a [pull request](https://help.github.com/articles/using-pull-requests).
